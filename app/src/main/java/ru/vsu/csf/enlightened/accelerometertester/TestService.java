@@ -38,12 +38,10 @@ public class TestService extends IntentService {
         catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
     private void publishResults(int result) {
-        Intent intent = new Intent();
+        Intent intent = new Intent(TAG);
         intent.putExtra("result", result);
         intent.putExtra("SUM", SUM);
 
